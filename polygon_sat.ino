@@ -4,8 +4,8 @@
 #define END_SWITCH1 2
 #define END_SWITCH2 3
 
-#define LEFT_DIR 0
-#define RIGHT_DIR 1
+#define LEFT_DIR 1
+#define RIGHT_DIR 0
 
 #define STEP_IN_ROTATION 200
 
