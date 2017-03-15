@@ -114,9 +114,9 @@ void doSteps(long steps) {
 void doStep() {
 
   digitalWrite(STEP_PIN, HIGH);
-  delay(1);
+  delayMicroseconds(500);
   digitalWrite(STEP_PIN, LOW);
-  delay(1);
+  delayMicroseconds(500);
 
 }
 
