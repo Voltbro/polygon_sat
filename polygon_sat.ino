@@ -1,11 +1,11 @@
 #define STEP_PIN 10
 #define DIR_PIN 16
 #define POWER_ENABLE_PIN 14
-#define END_SWITCH1 2
-#define END_SWITCH2 3
+#define END_SWITCH1 3
+#define END_SWITCH2 2
 
-#define LEFT_DIR 1
-#define RIGHT_DIR 0
+#define LEFT_DIR 0
+#define RIGHT_DIR 1
 
 #define STEP_IN_ROTATION 200
 
@@ -57,13 +57,13 @@ void move(int dir, unsigned int rotation) {
 boolean isEndSwitch() {
 
   if (digitalRead(END_SWITCH1) == 1) {
-    Serial1.println("END_SWITCH1");
+    Serial1.println("END_SWITCH1 (Start)");
     rollBack(RIGHT_DIR);
     return true;
   }
 
   if (digitalRead(END_SWITCH2) == 1) {
-    Serial1.println("END_SWITCH2");
+    Serial1.println("END_SWITCH2 (Finish)");
     rollBack(LEFT_DIR);
     return true;
   }
@@ -119,4 +119,3 @@ void doStep() {
   delayMicroseconds(800);
 
 }
-
